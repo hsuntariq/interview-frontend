@@ -32,17 +32,15 @@ const GetSectors = () => {
             </h1>
               <div className="row">
                 {sectors?.map((sector)=>{
-                    return (
-                        <>      
-                        <div className="col-sm-3">
-                                <div className="card p-2 mb-3" style={{ height: '100px' }}>
-                                <h6 className="text-secondary">id:{sector._id}</h6>
-                                <h6 className="text-dark">sector:{sector.sector}</h6>
-                            </div>
-                        </div>
-                        </>
-                    )
-                })}
+              return sector.selectedValues.map((mySector) => {
+                return (
+                  <>
+                  <option value={mySector}>{mySector}</option>
+
+                  </>
+                )
+              })
+            })}
             </div>
         </div>
     </>
