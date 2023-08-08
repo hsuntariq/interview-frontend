@@ -22,7 +22,7 @@ const GetSectors = () => {
         getData();
     },[])
     if (isLoading) {
-        return <h1>Loading...</h1>
+        return <h1 className='text-light text-center'>Loading...</h1>
     }
   return (
     <>
@@ -32,8 +32,9 @@ const GetSectors = () => {
             </h1>
               <div className="row">
                 {sectors?.map((sector)=>{
-                    return (
-                        <>      
+                    return sector.selectedValues.map((mySector) => {
+                return (
+                  <>     
                         <div className="col-sm-3">
                                 <div className="card p-2 mb-3" style={{ height: '100px' }}>
                                 <h6 className="text-secondary">id:{sector._id}</h6>
@@ -42,6 +43,9 @@ const GetSectors = () => {
                         </div>
                         </>
                     )
+                      </>
+                )
+              })
                 })}
             </div>
         </div>
