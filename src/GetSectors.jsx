@@ -31,22 +31,22 @@ const GetSectors = () => {
                 Sectors
             </h1>
               <div className="row">
-                {sectors?.map((sector)=>{
-                    return sector.selectedValues.map((mySector) => {
+          {sectors.map((sector)=>{
+              return sector.selectedValues.map((mySector) => {
                 return (
-                  <>     
-                        <div className="col-sm-3">
-                                <div className="card p-2 mb-3" style={{ height: '100px' }}>
-                                <h6 className="text-secondary">id:{sector._id}</h6>
-                                <h6 className="text-dark">sector:{sector.sector}</h6>
-                            </div>
-                        </div>
-                        </>
-                    )
-                      </>
+                  <>
+                <div className="col-sm-3">
+                  <div className="card p-2 mb-3" style={{ height: '100px' }}>
+                    <h6 className="text-secondary">id:{sector._id}</h6>
+                    <h6 className="text-dark">sector:{mySector}</h6>
+                  </div>
+                </div>
+
+
+                  </>
                 )
               })
-                })}
+            })}
             </div>
         </div>
     </>
