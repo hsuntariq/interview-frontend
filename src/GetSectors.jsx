@@ -33,7 +33,7 @@ const GetSectors = () => {
       <div className="row">
         {sectors.map((sector) => (
           <div className="col-sm-3" key={sector._id}>
-            <div className="card p-2 mb-3" style={{ maxHeight: '150px',overflowY:'scroll' }}>
+            <div className="card p-2 mb-3" style={{ minHeight:'150px',maxHeight: '150px',overflowY:'scroll' }}>
               <h6 className="text-secondary">Id:  <span className="text-secondary fw-lighter"> {sector._id} </span></h6>
               <h6 className="text-dark">Name: <span className="text-secondary fw-lighter"> {sector.name} </span></h6>
               <h6 className="text-dark">Sectors:<span className="text-secondary fw-lighter"> {sector.selectedValues.join(', ')}</span></h6>
